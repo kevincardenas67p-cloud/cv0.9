@@ -1,0 +1,82 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+    margin: 0;
+    padding: 40px;
+}
+
+/* Título */
+h1 {
+    color: #333;
+}
+
+/* Menú */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Opciones del menú */
+nav a {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Contenedor del tooltip */
+.tooltip {
+    position: relative;
+}
+
+/* Mensaje emergente */
+.mensaje {
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #222;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+
+    font-size: 13px;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+/* Mostrar mensaje al pasar el cursor */
+.tooltip:hover .mensaje {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* Efecto al pasar el cursor por el menú */
+nav a:hover {
+    background-color: #1e40af;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 150px;
+    }
+}
